@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Meme Generator</h1>
+        
+        <!-- Template Selection Screen -->
+        <div id="template-selection" class="template-screen">
+            <h2>Choose Your Meme Template</h2>
+            <div class="template-grid">
+                <div class="template-option" data-image="https://i.imgflip.com/1bij.jpg">
+                    <img src="https://i.imgflip.com/1bij.jpg" alt="Drake Pointing">
+                    <p>Drake Pointing</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/30b1gx.jpg">
+                    <img src="https://i.imgflip.com/30b1gx.jpg" alt="This is Fine">
+                    <p>This is Fine</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/1g8my4.jpg">
+                    <img src="https://i.imgflip.com/1g8my4.jpg" alt="Distracted Boyfriend">
+                    <p>Distracted Boyfriend</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/26am.jpg">
+                    <img src="https://i.imgflip.com/26am.jpg" alt="Surprised Pikachu">
+                    <p>Surprised Pikachu</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/1ur9b0.jpg">
+                    <img src="https://i.imgflip.com/1ur9b0.jpg" alt="Expanding Brain">
+                    <p>Expanding Brain</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/2zo1ki.jpg">
+                    <img src="https://i.imgflip.com/2zo1ki.jpg" alt="Woman Yelling at Cat">
+                    <p>Woman Yelling at Cat</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/1otk96.jpg">
+                    <img src="https://i.imgflip.com/1otk96.jpg" alt="Panik Kalm Panik">
+                    <p>Panik Kalm Panik</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/1c1uej.jpg">
+                    <img src="https://i.imgflip.com/1c1uej.jpg" alt="Leonardo DiCaprio">
+                    <p>Leonardo DiCaprio</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/4t0m5.jpg">
+                    <img src="https://i.imgflip.com/4t0m5.jpg" alt="Disaster Girl">
+                    <p>Disaster Girl</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/1nhBan.jpg">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD6ukHRmkNcXoIWXbPE45J7NFcfV4FxrxczA&s" alt="Left Exit 12">
+                    <p>Sponge Bob</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/61kujv.jpg">
+                    <img src="https://media.tenor.com/Vsa5nvYxHrYAAAAM/no.gif" alt="Bernie Sanders">
+                    <p>I Robot</p>
+                </div>
+                <div class="template-option" data-image="https://i.imgflip.com/23ls.jpg">
+                    <img src="https://i.imgflip.com/23ls.jpg" alt="Grumpy Cat">
+                    <p>Grumpy Cat</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meme Editor Screen (hidden initially) -->
+        <div id="meme-editor" class="editor-screen" style="display: none;">
+            <button id="back-button">← Back to Templates</button>
+            
+            <div class="meme-section">
+                <div class="meme-canvas">
+                    <img id="meme-image" src="" alt="Meme Image">
+                    <div class="text-overlay">
+                        <div id="top-text" class="meme-text top">TOP TEXT</div>
+                        <div id="bottom-text" class="meme-text bottom">BOTTOM TEXT</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="input-group">
+                    <label for="top-input">Top Text:</label>
+                    <input type="text" id="top-input" placeholder="Enter top text">
+                </div>
+                
+                <div class="input-group">
+                    <label for="bottom-input">Bottom Text:</label>
+                    <input type="text" id="bottom-input" placeholder="Enter bottom text">
+                </div>
+                
+                <button id="update-meme">Update Meme</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
