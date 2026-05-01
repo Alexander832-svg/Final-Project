@@ -22,3 +22,12 @@ function goBack() {
     document.getElementById("template-selection").style.display = "block";
 }
 
+function customImage() {
+    let imageUrl = prompt("Enter the url of your own image:");
+
+    if (imageUrl) {
+        selectImg(imageUrl)
+
+    }
+}
+
