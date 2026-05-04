@@ -12,9 +12,13 @@ function selectImg(imageUrl) {
 function updateMeme() {
     let topText = document.getElementById("top-input").value;
     let bottomText = document.getElementById("bottom-input").value;
+    let color = document.getElementById("top-text").value; 
+    
+   
     
     document.getElementById("top-text").innerText = topText;
     document.getElementById("bottom-text").innerText = bottomText;
+  
 }
 
 function goBack() {
@@ -26,8 +30,12 @@ function customImage() {
     let imageUrl = prompt("Enter the url of your own image:");
 
     if (imageUrl) {
-        selectImg(imageUrl)
+        selectImg(imageUrl);
 
     }
+}
+
+function changeColor() {
+
 }
 

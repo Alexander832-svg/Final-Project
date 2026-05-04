@@ -14,17 +14,17 @@
         <div id="template-selection" class="template-screen">
             <h2>Choose Your Meme Template</h2>
             <div class="template-grid">
-                <div class="template-option"  onclick="selectImg('https://i.imgflip.com/1bij.jpg')">
-                    <img src="https://i.imgflip.com/1bij.jpg" alt="Drake Pointing">
-                    <p>Drake Pointing</p>
+                <div class="template-option"  onclick="selectImg('https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUycG1jZWRqNHhydTJyenV2OWdiYWx4cnBpMXZ4YmZpamN1ZndpNjFyZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5SR0W0u2at2CoHdtEq/200w.gif')">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUycG1jZWRqNHhydTJyenV2OWdiYWx4cnBpMXZ4YmZpamN1ZndpNjFyZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5SR0W0u2at2CoHdtEq/200w.gif" alt="Drake Pointing">
+                    <p>Intensamente</p>
                 </div>
                 <div class="template-option" onclick="selectImg('https://i.imgflip.com/30b1gx.jpg')">
                     <img src="https://i.imgflip.com/30b1gx.jpg" alt="This is Fine">
                     <p>This is Fine</p>
                 </div>
-                <div class="template-option" onclick="selectImg('https://i.imgflip.com/1g8my4.jpg')">
-                    <img src="https://i.imgflip.com/1g8my4.jpg" alt="Distracted Boyfriend">
-                    <p>Distracted Boyfriend</p>
+                <div class="template-option" onclick="selectImg('https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyYXA3dTU4NXI1N2c5ejUxMzZqNXZjaGFqYjF1b2Mzb2phbndqb3ptMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ZDJtqun5EJ36Eq912O/200w.gif')">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyYXA3dTU4NXI1N2c5ejUxMzZqNXZjaGFqYjF1b2Mzb2phbndqb3ptMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ZDJtqun5EJ36Eq912O/200w.gif" alt="Distracted Boyfriend">
+                    <p>Jarvis</p>
                 </div>
                 <div class="template-option" onclick="selectImg('https://i.imgflip.com/26am.jpg')">
                     <img src="https://i.imgflip.com/26am.jpg" alt="Surprised Pikachu">
@@ -62,8 +62,9 @@
                     <img src="https://media1.tenor.com/m/9MuzJyg8HbIAAAAC/robert-downey-jr-huh.gif" alt="Grumpy Cat">
                     <p>Stark</p>
                 </div>
-                <div class="template-option" onclick="selectImg('')">
-                    <img id="custom-image" src="" alt="custom iamge">
+                <div class="template-option" onclick="customImage('')">
+                    <img id="custom-image" src="data:image/png;base64,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" alt="custom iamge">
+                    <p>Add Custom Image</p>
                 </div>
             </div>
         </div>
@@ -91,6 +92,11 @@
                 <div class="input-group">
                     <label for="bottom-input">Bottom Text:</label>
                     <input type="text" id="bottom-input" placeholder="Enter bottom text">
+                </div>
+
+                 <div class="input-group">
+                    <label for="bottom-color">Text Color: </label>
+                    <input type="value" id="bottom-change-color">
                 </div>
                 
                 <button onclick="updateMeme()" id="update-meme">Update Meme</button>
