@@ -93,11 +93,17 @@
                     <label for="bottom-input">Bottom Text:</label>
                     <input type="text" id="bottom-input" placeholder="Enter bottom text">
                 </div>
-
-                 <div class="input-group">
-                    <label for="bottom-color">Text Color: </label>
-                    <input type="value" id="bottom-change-color">
+                <div class="input-size">
+                    <p>Change Font size</p>
+                     <input id="size" type="text" onclick="" placeholder="Top text"></input>
+                     <input id="size" type="text" onclick="" placeholder="Bottom text"></input>
                 </div>
+
+                 <div class="input-color">
+                     <button id="color-button" onclick="changeTopColor()">Top text color</button>
+                     <button id="color-button" onclick="changeBottomColor()">Bottom text color</button>
+                </div>
+                
                 
                 <button onclick="updateMeme()" id="update-meme">Update Meme</button>
             </div>

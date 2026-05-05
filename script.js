@@ -14,8 +14,6 @@ function updateMeme() {
     let bottomText = document.getElementById("bottom-input").value;
     let color = document.getElementById("top-text").value; 
     
-   
-    
     document.getElementById("top-text").innerText = topText;
     document.getElementById("bottom-text").innerText = bottomText;
   
@@ -35,7 +33,17 @@ function customImage() {
     }
 }
 
-function changeColor() {
+function changeTopColor() {
+    let topColor = prompt("Select a color");
+    let newColor = document.getElementById("top-text");
 
+    newColor.style.color = topColor;
+}
+
+function changeBottomColor() {
+    let bottomColor = prompt("Select a color");
+    let newColor = document.getElementById("bottom-text");
+
+    newColor.style.color = bottomColor;
 }
 

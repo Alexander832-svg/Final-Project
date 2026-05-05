@@ -263,3 +263,26 @@ input:focus {
 #update-meme:active {
     transform: translateY(-1px);
 }
+
+#color-button {
+    padding: 8px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.input-color {
+    align-content: center;
+    padding-left: 65px;
+}
+
+
