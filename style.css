@@ -285,4 +285,9 @@ input:focus {
     padding-left: 65px;
 }
 
+.input-size {
+    display: flex;
+    gap: 20px;
+}
+
 
