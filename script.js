@@ -8,8 +8,18 @@ function selectImg(imageUrl) {
     let memeImage = document.getElementById("meme-image");
     memeImage.src = imageUrl;
 
+    resetMemeSettings();
 
 }
+
+function darkMode() {
+    console.log("Click");
+    let themeEditor = document.getElementById("principal");
+    let templateOptions = document.getElementById("template-options");
+    themeEditor.style.backgroundColor = "#202124";
+
+    templateOptions.style.backgroundColor = "#292a2d"
+} 
 
 function updateMeme() {
     let topText = document.getElementById("top-input").value;
@@ -23,6 +33,7 @@ function updateMeme() {
 function goBack() {
     document.getElementById("meme-editor").style.display = "none";
     document.getElementById("template-selection").style.display = "block";
+    
 
 }
 
@@ -74,10 +85,10 @@ function resetMemeSettings() {
   
   // Reiniciar el texto mostrado en el meme
   let topText = document.getElementById("top-text");
-  topText.innerText = "";
+  topText.innerText = "TOP TEXT";
   
   let bottomText = document.getElementById("bottom-text");
-  bottomText.innerText = "";
+  bottomText.innerText = "BOTTOM TEXT";
   
   // Reiniciar colores a blanco (o el color que prefieras)
   topText.style.color = "#FFFFFF";

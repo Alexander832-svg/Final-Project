@@ -7,26 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div id="principal" class="container">
+        <button id="body-color" onclick="darkMode()">Light Mode</button>
         <h1>Meme Generator</h1>
+        
         
         <!-- Template Selection Screen -->
         <div id="template-selection" class="template-screen">
             <h2>Choose Your Meme Template</h2>
             <div class="template-grid">
-                <div class="template-option"  onclick="selectImg('https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUycG1jZWRqNHhydTJyenV2OWdiYWx4cnBpMXZ4YmZpamN1ZndpNjFyZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5SR0W0u2at2CoHdtEq/200w.gif')">
+                <div class="template-option" id="template-options"  onclick="selectImg('https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUycG1jZWRqNHhydTJyenV2OWdiYWx4cnBpMXZ4YmZpamN1ZndpNjFyZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5SR0W0u2at2CoHdtEq/200w.gif')">
                     <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUycG1jZWRqNHhydTJyenV2OWdiYWx4cnBpMXZ4YmZpamN1ZndpNjFyZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5SR0W0u2at2CoHdtEq/200w.gif" alt="Drake Pointing">
                     <p>Intensamente</p>
                 </div>
-                <div class="template-option" onclick="selectImg('https://i.imgflip.com/30b1gx.jpg')">
+                <div class="template-option" id="template-options"  onclick="selectImg('https://i.imgflip.com/30b1gx.jpg')">
                     <img src="https://i.imgflip.com/30b1gx.jpg" alt="This is Fine">
                     <p>This is Fine</p>
                 </div>
-                <div class="template-option" onclick="selectImg('https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyYXA3dTU4NXI1N2c5ejUxMzZqNXZjaGFqYjF1b2Mzb2phbndqb3ptMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ZDJtqun5EJ36Eq912O/200w.gif')">
+                <div class="template-option" id="template-options"  onclick="selectImg('https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyYXA3dTU4NXI1N2c5ejUxMzZqNXZjaGFqYjF1b2Mzb2phbndqb3ptMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ZDJtqun5EJ36Eq912O/200w.gif')">
                     <img src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyYXA3dTU4NXI1N2c5ejUxMzZqNXZjaGFqYjF1b2Mzb2phbndqb3ptMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ZDJtqun5EJ36Eq912O/200w.gif" alt="Distracted Boyfriend">
                     <p>Jarvis</p>
                 </div>
-                <div class="template-option" onclick="selectImg('https://i.imgflip.com/26am.jpg')">
+                <div class="template-option" id="template-options"  onclick="selectImg('https://i.imgflip.com/26am.jpg')">
                     <img src="https://i.imgflip.com/26am.jpg" alt="Surprised Pikachu">
                     <p>Surprised Pikachu</p>
                 </div>
