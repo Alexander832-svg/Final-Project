@@ -310,4 +310,26 @@ input:focus {
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
+#download-meme {
+    padding: 15px;
+    background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#download-meme:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.6);
+    background: linear-gradient(45deg, #45b7d1, #4ecdc4);
+    
+}
+
 

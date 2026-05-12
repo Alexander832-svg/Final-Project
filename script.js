@@ -9,9 +9,11 @@ function selectImg(imageUrl) {
     let memeImage = document.getElementById("meme-image");
     memeImage.src = imageUrl;
 
+    //Reset the meme settings to default values
     resetMemeSettings();
 
 }
+
 
 function selectImg(imageUrl) {
     document.getElementById("template-selection").style.display = "none";
@@ -62,6 +64,7 @@ function changeTopColor() {
     let topColor = prompt("Select a color");
     let newColor = document.getElementById("top-text");
 
+    
     newColor.style.color = topColor;
 }
 
@@ -100,40 +103,41 @@ function resetMemeSettings() {
   let bottomInput = document.getElementById("bottom-input");
   bottomInput.value = "";
   
-  // Reiniciar el texto mostrado en el meme
+  //Restart the text showed on the meme on top
   let topText = document.getElementById("top-text");
   topText.innerText = "TOP TEXT";
-  
+
+    //Restart the text showed on the meme on top
   let bottomText = document.getElementById("bottom-text");
   bottomText.innerText = "BOTTOM TEXT";
   
-  // Reiniciar colores a blanco (o el color que prefieras)
+  //Restart the text color to white
   topText.style.color = "#FFFFFF";
   bottomText.style.color = "#FFFFFF";
   
-  // Reiniciar tamaños de fuente a un valor por defecto
+  //Restart the text size
   topText.style.fontSize = "32px";
   bottomText.style.fontSize = "32px";
 }
 
 function descargarCaptura() {
-    // 1. Creamos un canvas oculto en memoria
+    // 1. Create a canvas and get its context
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
     const imgOriginal = document.getElementById("meme-image");
 
-    // 2. Ajustamos el tamaño del canvas al de la imagen
+    // 2. Adjust canvas size to match the original image
     canvas.width = imgOriginal.naturalWidth;
     canvas.height = imgOriginal.naturalHeight;
 
-    // 3. Dibujamos la imagen de fondo
+    // 3. Draw the original image onto the canvas
     ctx.drawImage(imgOriginal, 0, 0, canvas.width, canvas.height);
 
-    // 4. Configuramos el estilo del texto (puedes ajustarlo)
+    // 4. Configure text styles and draw the top and bottom text onto the canvas
     const topText = document.getElementById("top-text");
     const bottomText = document.getElementById("bottom-text");
 
-    // Función auxiliar para pintar texto con borde (estilo meme clásico)
+    // Auxiliary function to draw text with stroke for better visibility
     function drawMemeText(text, x, y, size, color) {
         ctx.fillStyle = color;
         ctx.strokeStyle = "black";
@@ -145,12 +149,12 @@ function descargarCaptura() {
         ctx.fillText(text.toUpperCase(), x, y);
     }
 
-    // Calculamos posiciones (Top y Bottom)
-    const fontSize = canvas.height * 0.1; // 10% de la altura de la imagen
+    // Calculate positions (Top and Bottom)
+    const fontSize = canvas.height * 0.1; // 10% of the image height
     drawMemeText(topText.innerText, canvas.width / 2, fontSize + 20, fontSize, topText.style.color || "white");
     drawMemeText(bottomText.innerText, canvas.width / 2, canvas.height - 40, fontSize, bottomText.style.color || "white");
 
-    // 5. Descarga automática
+    // 5. Download automatically
     const link = document.createElement("a");
     link.download = "mi-meme.png";
     link.href = canvas.toDataURL("image/png");
