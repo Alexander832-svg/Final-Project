@@ -1,6 +1,7 @@
 
 //Get the meme image you selected
-function selectImg(imageUrl) {
+//This is the code i made to select your image, if you want to try this code, just erase the 1, and put the 1 in the another one.
+function selectImg1(imageUrl) {
     // Change to editor screen
     document.getElementById("template-selection").style.display = "none";
     document.getElementById("meme-editor").style.display = "block";
@@ -14,21 +15,33 @@ function selectImg(imageUrl) {
 
 }
 
-
+//This is my code but modifyed by de IA to be able to download the image, this is the one is actually be used.
 function selectImg(imageUrl) {
     document.getElementById("template-selection").style.display = "none";
     document.getElementById("meme-editor").style.display = "block";
     
     let memeImage = document.getElementById("meme-image");
     
-    // This MUST happen before .src
-    memeImage.crossOrigin = "anonymous"; 
-    
-    // Add a timestamp to bypass the browser cache, which often causes the 'Tainted' error
-    memeImage.src = imageUrl + "?t=" + new Date().getTime();
+    // 1. Detectar si es un archivo subido localmente (Base64)
+    if (imageUrl.startsWith('data:')) {
+        memeImage.removeAttribute("crossOrigin"); // Base64 no usa CORS
+        memeImage.src = imageUrl;                 // Se asigna directo, SIN sumarle "?t="
+    } 
+    // 2. Detectar si es una plantilla de tu propio servidor web
+    else if (imageUrl.startsWith('/') || imageUrl.includes(window.location.hostname)) {
+        memeImage.crossOrigin = "anonymous"; 
+        const separator = imageUrl.includes('?') ? '&' : '?';
+        memeImage.src = imageUrl + separator + "t=" + new Date().getTime();
+    } 
+    else {
+        memeImage.crossOrigin = "anonymous";
+        const separator = imageUrl.includes('?') ? '&' : '?';
+        memeImage.src = imageUrl + separator + "t=" + new Date().getTime();
+    }
 
     resetMemeSettings();
 }
+
 
 
 //Actualices the image
